@@ -1,0 +1,162 @@
+
+
+:root{
+  transform-style:preserve-3d;
+}
+
+#x-model-renderLayer{
+  position:fixed;
+  top:0;
+  left:0;
+  pointer-events:none
+}
+
+.code {
+  padding: 1em;
+  background:#eee;
+  border:2px solid #777;
+}
+
+.model {
+  pointer-events: none;
+  display: block;
+  
+}
+.model--medium {
+  width: 37.5vmin;
+  height: 37.5vmin;
+  background-attachment: fixed;
+}
+.model--small {
+  width: 25vmin;
+  height: 25vmin;
+}
+.model--tiny {
+  width: 15vmin;
+  height: 15vmin;
+}
+.model--abs {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 0;
+}
+.model--abs.model--medium {
+  margin: -18.75vmin;
+}
+.model--abs.model--small {
+  margin: -12.5vmin;
+}
+.model--abs.model--tiny {
+  margin: -7.5vmin;
+}
+.model--spaced {
+  margin: 1.5rem;
+}
+
+.model-wrap {
+  margin: auto;
+  position: relative;
+}
+
+.test {
+  margin-bottom: 0em;
+  position:fixed;
+  top: 200px;
+  right: 0px;
+  
+}
+
+.test__output {
+  font-size: 0;
+  text-align: center;
+  padding: 2rem;
+  z-index: -1;
+  
+}
+.test .model {
+  display: inline-block;
+}
+.test--fail {
+  color: #c00;
+  background: rgba(200,0,0,.2)
+}
+.test--fail::before {
+  content: 'FAILING TEST'
+}
+
+.test--2 .model {
+  min-width: 10rem;
+  min-height: 10rem;
+}
+
+.test--4 .test__output {
+  white-space: nowrap;
+  overflow: scroll(5);
+}
+
+.test--5 .test__output {
+  position: relative;
+  height: 50vmin;
+}
+
+.test--6 .model {
+  transition: 1s transform;
+}
+.test--6 .test__output:hover .model {
+  transform: rotateY(90deg)
+}
+
+.test--8 .model-wrap, .test--9 .model-wrap {
+  height: 50vmin;
+  width: 50vmin;
+}
+
+.test--8 .model {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+
+
+@keyframes spin-xyz {
+  from {
+    transform: rotateX(360deg) rotateY(90deg) rotateZ(180deg);
+  }
+  to {
+    transform: rotateX(-360deg) rotateY(-90deg) rotateZ(180deg);
+  }
+}
+@keyframes spin-x {
+  to {
+    transform: rotateX(360deg);
+  }
+}
+@keyframes spin-y {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes spin-z {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes swing-x {
+  from {
+    transform: translateX(-2vw);
+  }
+  to {
+    transform: translateX(2vw);
+    
+  }
+}
+@keyframes spin-xz {
+  from {
+    transform: rotateX(360deg) rotateZ(360deg);
+  }
+  to {
+    transform: rotateX(-360deg) rotateZ(0deg);
+  }
+}
