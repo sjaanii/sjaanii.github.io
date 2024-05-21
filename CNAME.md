@@ -1,1 +1,1 @@
-https://studiosjaan.nl
+STUDIOSJAAN.NL
