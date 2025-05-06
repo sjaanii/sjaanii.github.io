@@ -1,2 +1,4 @@
 # sjaanii.github.io
-Website Studio Sjaan
+Offical website Studio Sjaan
+
+Designed and created by Studio Sjaan
